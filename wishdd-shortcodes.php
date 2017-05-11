@@ -17,6 +17,13 @@ function wishdd_gdoc_embed($atts, $content = null)
 	$width = 640;
 	$height = ($width/8 ) * 6; 
 	
+	if (filter_var($doc_id, FILTER_VALIDATE_URL))
+	{
+		$parsed = parse_url($doc_id);
+		$query = $parsed['query'];
+		$doc_id = substr($query, 3, strlen($query) );
+	}
+
 	$output = '
 	<iframe src="https://drive.google.com/file/d/'.$doc_id.'/preview" width="'.$width.'" height="'.$height.'"></iframe>
 
