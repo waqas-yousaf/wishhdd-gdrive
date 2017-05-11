@@ -1,7 +1,7 @@
 <?php
 /*
 * Wishdd GDrive Embed
-* Author  -A wordpress plugin to Embed Google Drive Documents.
+* Author  - A wordpress plugin to Embed Google Drive Documents.
 * Website -  http://wishdd.com/
 * Contact - waqas@wishdd.com
 * License: GPLv2
@@ -21,7 +21,7 @@ function wishdd_gdoc_embed($atts, $content = null)
 	<iframe src="https://drive.google.com/file/d/'.$doc_id.'/preview" width="'.$width.'" height="'.$height.'"></iframe>
 
 &nbsp;
-<p style="width:'.$height.'; text-align: center; "><a class="btn btn-default btn-lg" href="https://drive.google.com/uc?export=download&id='.$doc_id.'">'.$btn_txt.'</a></p>';
+<p style="text-align: center; margin: 20px 0px 30px 0px;"><a class="btn btn-default btn-lg" href="https://drive.google.com/uc?export=download&id='.$doc_id.'">'.$btn_txt.'</a></p>';
 	return $output;
 }
 
