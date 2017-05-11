@@ -14,8 +14,9 @@ function wishdd_gdoc_embed($atts, $content = null)
 	global  $sc_title, $sc_placeholer;
 	
 	$doc_id  = esc_html__($atts['id']);
-	$btn_txt  = esc_html__($atts['btn_txt']);
-
+	$btn_txt =   esc_html__($atts['btn_txt']);
+	$btn_txt = ($btn_txt == "") ? "Downlod" :  esc_html__($atts['btn_txt']);
+	
 	$output = '
 	<iframe src="https://drive.google.com/file/d/'.$doc_id.'/preview" width="640" height="480"></iframe>
 
