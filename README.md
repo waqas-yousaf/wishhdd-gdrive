@@ -1,3 +1,9 @@
-# wishhdd-gdrive
-Wordpress Plugin to embed Documents on Google Drive.
-This Plugin asks for 2 parameters. Google Document ID and Download Button Label. Pretty Simple.. eh?
+# wishhdd-gdrive-doc-embed
+<h3>Wordpress Plugin to embed Documents on Google Drive.</h3>
+<br /> <br />
+This Plugin asks for 2 parameters. 
+<ol>
+<li>Google Drive Document URL</li>
+<li>and Download Button Label.</li>
+</ol>
+Pretty Simple.. eh?
