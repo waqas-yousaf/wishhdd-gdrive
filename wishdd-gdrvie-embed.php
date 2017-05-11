@@ -25,7 +25,7 @@ function wishdd_add_resources()
 		wp_enqueue_style("wishdd_style", plugins_url('css/wishdd-custom.css', __FILE__));
 }
 
-add_action('wp_enqueue_scripts' , 'wishdd_add_resources');
+add_action('admin_enqueue_scripts' , 'wishdd_add_resources');
 
 
 // Filter Functions with Hooks

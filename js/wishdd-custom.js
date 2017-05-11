@@ -9,62 +9,30 @@
 (function() {
     tinymce.PluginManager.add('wishdd_mce_button', function(editor, url) {
         editor.addButton('wishdd_mce_button', {
-            icon: false,
-            text: "GDoc Embed",
+   title: 'WISHDD GDoc Embed',
+            icon: 'icon dashicons-book',
             onclick: function() {
                 editor.windowManager.open({
                     title: "Insert wishdd's Tabs",
                     body: [{
                         type: 'textbox',
-                        name: 'tab1title',
-                        label: 'Tab One Title',
+                        name: 'docid',
+                        label: 'Document ID',
                         value: ''
                     },
                     {
                         type: 'textbox',
-                        name: 'tab1content',
-                        label: 'Tab One Content',
-                        value: ''
-                    },
-                    {
-                        type: 'textbox',
-                        name: 'tab2title',
-                        label: 'Tab Two Title',
-                        value: ''
-                    },
-                    {
-                        type: 'textbox',
-                        name: 'tab2content',
-                        label: 'Tab Two Content',
-                        value: ''
-                    },
-                    {
-                        type: 'textbox',
-                        name: 'gallerysource',
-                        label: 'Gallery source',
-                        value: ''
-                    },
-                    {
-                        type: 'textbox',
-                        name: 'gallerytitle',
-                        label: 'Gallery title',
+                        name: 'download_text',
+                        label: 'Download Button Text',
                         value: ''
                     }],
                     onsubmit: function(e) {
                         editor.insertContent(
-                            '[my_tabs][my_tab title="' +
-                            e.data.tab1title + 
-                            '"]' +
-                            e.data.tab1content + 
-                            '[/my_tab][my_tab title="' +
-                            e.data.tab2title + 
-                            '"][my_gallery source="' + 
-                            e.data.gallerysource + 
-                            '" title="' +
-                            e.data.gallerytitle + 
-                            '"]' +
-                            e.data.tab2content + 
-                            '[/my_tab][/my_tabs]'
+                            '[wishdd_gdoc id="' +
+                            e.data.docid + 
+                            '" btn_txt="' +
+                            e.data.download_text + 
+                            '"]'
                         );
                     }
                 });
