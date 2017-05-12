@@ -1,4 +1,4 @@
-# wishhdd-gdrive-doc-embed
+# Google Documents Embedding Plugin by WISHDD
 <h3>Wordpress Plugin to embed Documents on Google Drive.</h3>
 <br />
 This Plugin asks for 2 parameters. 
